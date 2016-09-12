@@ -13,12 +13,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.text > h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 75px;
-  color: #cf2333;
-}
-
 .text > kbd {
   position: relative;
   left: -340px;
