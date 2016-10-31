@@ -1,5 +1,5 @@
 server {
-    root              <%= ENV['OPENSHIFT_REPO_DIR'] %><%= ENV['NGINX_WWW_ROOT'] %>;
+    root              <%= ENV['OPENSHIFT_REPO_DIR'] %>public;
     listen            <%= ENV['OPENSHIFT_PHP_IP'] %>:<%= ENV['OPENSHIFT_PHP_PORT'] %>;
     server_name       <%= ENV['OPENSHIFT_APP_DNS'] %>;
     index             index.php index.html index.htm <%= ENV['NGINX_EXTRA_INDEX'] %>;
@@ -36,6 +36,6 @@ server {
 
     # Handle any other URI
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ /index.php?$query_string;
     }
 }
