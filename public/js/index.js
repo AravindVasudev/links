@@ -10,7 +10,7 @@ $(function() {
   new Clipboard('.copy');
   
   $("#submit-code").one("click", function() {
-  
+    $("#submit-code").css('backgroundColor', '#E0E0E0');
     $.ajax({
       method: 'POST',
       url: '/add',
@@ -19,12 +19,12 @@ $(function() {
         },
       data: {id: $(".key-box").eq(0).val(), url: $(".url-box").val()},
       dataType: 'json',
-      success: function(data) {
-        console.log(data);
-        
+      beforeSend: function() {
         $(".advanced").empty();
         $("#advanced").empty();
-
+      },
+      success: function(data) {
+        console.log(data);
         if(data.id) {
           $(".cbox > input").val("http://links.gq/" + data.id);
           $(".cbox > button").addClass("copy").html("COPY").attr("data-clipboard-text","http://links.gq/" + data.id);
@@ -32,6 +32,9 @@ $(function() {
         else {
         $(".cbox > input").val("Error:" + data.error);
         }
+      },
+      error: function(xhr,status,error) {
+        $(".cbox > input").val("Oops! Check your inputs, captain");
       }
     });
   });

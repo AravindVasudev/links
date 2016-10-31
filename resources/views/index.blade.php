@@ -43,6 +43,7 @@
       <input type="text" class="url-box enter-trig" placeholder="Paste a link to shorten it" name="pin">
       <div class="break"><br></div>
       <button type="button" class="btn btn-color url-button trigg" id="submit-code">SHORTEN</button>
+      {{ csrf_field() }}
       <br><br>
     </div>
     <p class="advanced">Advanced</p>

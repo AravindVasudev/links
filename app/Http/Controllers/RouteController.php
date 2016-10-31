@@ -14,23 +14,26 @@ class RouteController extends Controller
 
     //Adds a URL
     function add(Request $request) {
+        $rules = [
+            'url' => 'required|url'
+        ];
 
-      $this->validate($request, [
-          'id' => 'max:20',
-          'url' => 'required|url'
-      ]);
+        $this->validate($request, $rules);
 
-      $req = $request->all();
+        $req = $request->all();
 
-      if(!isset($req['id']))
-          $req['id'] = substr(uniqid(),0,6);
+        if($req['id'] === '')
+            $req['id'] = substr(md5(uniqid()), 0, 6);
 
-      $newLink = new link($req);
-      $newLink->save();
+        $newLink = new link();
+        $newLink->id = $req['id'];
+        $newLink->url = $req['url'];
+        $newLink->save();
 
-      return ['id' => $newLink->id];
+        return $req;
     }
 
+    //Redirect
     function redirectToKey(link $id) {
         $id->visits++;
         $id->save();
