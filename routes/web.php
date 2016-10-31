@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', 'RouteController@index');
+Route::group(['middleware' => ['web']], function() {
+  Route::get('/', 'RouteController@index');
 
-Route::post('/add', 'RouteController@add');
+  Route::post('/add', 'RouteController@add');
 
-Route::get('/{id}', 'RouteController@redirectToKey');
+  Route::get('/{id}', 'RouteController@redirectToKey');
+});
