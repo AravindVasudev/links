@@ -9,7 +9,7 @@ class RouteController extends Controller
 {
     //Index Page
     function index() {
-        return view('index', ['maintainance' => true]);
+        return view('index', ['maintainance' => false]);
     }
 
     //Adds a URL
