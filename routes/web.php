@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index', ['maintainance' => true]);
-});
+Route::get('/', 'RouteController@index');
+
+Route::post('/add', 'RouteController@add');
+
+Route::get('/{id}', 'RouteController@redirectToKey');

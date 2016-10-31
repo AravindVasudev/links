@@ -14,6 +14,11 @@
 
 {{-- Styling and Fonts --}}
 @section('extendHead')
+  <script>
+    $(function() {
+       $("body").css("background", '#F9F9F9 url("https://unsplash.it/' + window.innerWidth + '/' + window.innerHeight + '/?random") no-repeat');
+    })
+  </script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:300|Dosis|Ubuntu:300italic' rel='stylesheet' type='text/css'>
 @stop
 
