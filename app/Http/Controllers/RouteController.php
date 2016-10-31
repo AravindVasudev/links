@@ -14,9 +14,21 @@ class RouteController extends Controller
 
     //Adds a URL
     function add(Request $request) {
-        $req = $request->all();
 
-        return ['report' => 'SITE UNDER MAINTAINANCE'];
+      $this->validate($request, [
+          'id' => 'max:20',
+          'url' => 'required|url'
+      ]);
+
+      $req = $request->all();
+
+      if(!isset($req['id']))
+          $req['id'] = substr(uniqid(),0,6);
+
+      $newLink = new link($req);
+      $newLink->save();
+
+      return ['id' => $newLink->id];
     }
 
     function redirectToKey(link $id) {
