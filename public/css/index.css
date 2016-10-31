@@ -1,0 +1,557 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+  background-size: cover;
+  font-family: 'Dosis', sans-serif;
+  color: #e62739;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text > kbd {
+  position: relative;
+  left: -340px;
+  top: 50px;
+}
+.cbox {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.url-box, .key-box {
+  height: 60px;
+  font-size: 20px;
+  padding-left: 25px;
+  width: 60%;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 0;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.key-box {
+  height: 26px;
+  padding: 0;
+  width: 100px;
+  border-radius: 0;
+  font-family: 'Ubuntu', sans-serif;
+  color: red;
+  font-weight: 800;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+
+.url-button {
+  height: 60px;
+  width: 100px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -3px;
+  margin-top: -6.5px;
+}
+
+.url-box,
+.url-button {
+  display: inline-block;
+}
+
+.url-box:focus {
+  outline: 0;
+  border: 1px solid #e62739;
+/*  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);*/
+}
+.key-box:focus {
+  outline: 0;
+}
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #3b3a36;
+}
+
+a {
+  text-decoration: none;
+  color: #696969;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+.btn-color {
+  background-color: #e62739;
+  color: #ffffff;
+}
+
+.btn-color:hover {
+  background-color: #cf2333;
+  color: #ffffff;
+}
+
+.btn-color:active {
+  background-color: #b81f2d;
+  color: #ffffff;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center !important;
+}
+
+footer > a {
+  color: #cf2333 !important;
+}
+
+.advanced, #advanced {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Ubuntu', sans-serif;
+}
+#advanced {
+  display: none;
+}
+
+.break {
+  display: none;
+}
+
+::selection {
+  background: #ffb7b7;
+}
+::-moz-selection {
+  background: #ffb7b7;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  .cbox {
+    top: 45%;
+    left: 50%;
+    width: 100%;
+  }
+  .advanced, #advanced {
+    top: 75%;
+  }
+  .text > h1 {
+    font-size: 60px;
+  }
+  .url-box {
+    height: 40px;
+    font-size: 17px;
+    padding-left: 20px;
+    width: 60%;
+    border-radius: 5px;
+    width: 80%;
+    padding: 0;
+    
+  }
+  .url-button {
+  height: 40px;
+  width: 65px;
+  display: block;
+  border-radius: 5px;
+  width: 80%; 
+  margin: 0;
+  margin-left: 30px;
+  }
+  .text {
+    top: 25%;
+  }
+  .text > img {
+    height: 150px;
+    width: 300px;
+  }
+  .break {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
