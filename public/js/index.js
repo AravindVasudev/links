@@ -1,5 +1,4 @@
 $(function() {
-
   var url = 'http://unsplash.com/rss';
 
   $.ajax({
