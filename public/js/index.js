@@ -1,7 +1,11 @@
 $(function() {
   var randomImage = Math.floor(Math.random() * 10) + 1;
   var image = "#F5F5F5 url(../img/bg/" + randomImage + ".jpg" + ") no-repeat left top";
-  $('body').css('background', image).css('background-size', 'cover');
+
+  $('body').css({
+    'background': image,
+    'background-size': 'cover'
+  });
 
   $(".enter-trig").focus();
 
